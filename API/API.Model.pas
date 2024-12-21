@@ -33,6 +33,7 @@ type
     fLockingMode: TSQLiteLockingMode;
     fEncrypt: TSQLiteEncryptMode;
   public
+  {$REGION 'I am looking for a workaround or a clean solution to avoid redundant code re-implementation. '}
     function Pooled(aValue: Boolean): iSQLiteParams; reintroduce; overload;  virtual;
     function Database(aValue: string): iSQLiteParams; reintroduce; overload; virtual;
     function Username(aValue: string): iSQLiteParams; reintroduce; overload; virtual;
@@ -44,6 +45,7 @@ type
     function Password: string; overload; override;
 
     function Params: iSQLiteParams; reintroduce; virtual;
+  {$ENDREGION}
 
     constructor Create
       (const aDatabase: string;
