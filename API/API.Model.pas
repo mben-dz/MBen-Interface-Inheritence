@@ -38,10 +38,10 @@ type
     function Username(aValue: string): iSQLiteParams; reintroduce; overload; virtual;
     function Password(aValue: string): iSQLiteParams; reintroduce; overload; virtual;
 
-    function Pooled: Boolean; reintroduce; overload; override;
-    function Database: string; reintroduce; overload; override;
-    function UserName: string; reintroduce; overload; override;
-    function Password: string; reintroduce; overload; override;
+    function Pooled: Boolean; overload; override;
+    function Database: string; overload; override;
+    function UserName: string; overload; override;
+    function Password: string; overload; override;
 
     function Params: iSQLiteParams; reintroduce; virtual;
 
